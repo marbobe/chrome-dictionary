@@ -8,4 +8,22 @@ async function decirHola() {
     })
 }
 
-document.getElementById("boton").addEventListener("click", decirHola);
+const search = document.getElementById("search");
+const input = document.getElementById("input-el");
+const definitionSpace = document.getElementById("p-el");
+
+async function showDefinition(){
+
+    const text = "something";
+    definitionSpace.innerHTML = text;
+}
+
+
+input.focus();
+
+search.addEventListener("click", showDefinition);
+
+
+search.addEventListener("click", decirHola);
+
+
