@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Diccionari",
+  "version": "1.0.0",
+  "description": "Diccionari per estudiar",
+  "icons": {
+    "512": "images/dictionary.png"
+  },
+  "background":{
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "action":{ 
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
