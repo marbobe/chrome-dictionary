@@ -16,14 +16,13 @@ h1{
 p{
     font-style: italic;
     font-size: 1rem;
-    text-align: justify;
     padding: 0px 20px;
 }
 
 input{
     padding: 5px;
     margin-right: 5px;
-    width: 250px;
+    width: 270px;
 }
 
 button{
@@ -32,6 +31,7 @@ button{
     color: white;
     font-weight: bold;
     padding: 5px 10px;
+    margin-bottom: 4px;
     border-radius: 7%;
 }
 
@@ -43,4 +43,8 @@ button:hover{
 
 #extra-btn{
     display: none;
+}
+
+#wait{
+    padding: 10px;
 }

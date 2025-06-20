@@ -7,24 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dictionary Extension</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 
 <body>
     <div>
         <h1>Dictionary and memorizer</h1>
-        <p>Learn new words is <em>easy</em>, search the definition and get a reminder</p>
+        <p>Learn new words is easy, search the definition and get a reminder</p>
         <input class="" type="text" id="input-el">
         <button type="button" id="search-btn"> Search </button>
-
     </div>
+
     <div>
         <p id="p-el"></p>
+    </div>
+
+    <div class="wait" id="wait" style="display: none;">
+        <img src=" images/loading.gif" height="70px">
     </div>
 
     <div id="extra-btn">
         <button type="button" id="tooeasy-btn"> Too easy </button>
         <button type="button" id="reminder-btn"> Set Reminder </button>
+    </div>
+
+    <div id="container" style="display:none; ">
+        <div id="score"></div>
     </div>
 
     <script src="popup.js"></script>
