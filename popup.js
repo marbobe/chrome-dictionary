@@ -4,9 +4,10 @@ const definitionSpace = document.getElementById("p-el");
 const reminder = document.getElementById("reminder-btn");
 const tooEasy = document.getElementById("tooeasy-btn");
 const wait = document.getElementById("wait");
+let currentWord = "";
 let myWords = JSON.parse(localStorage.getItem("myWords")) || []; //cargar palabras anteriores si existen
 let learned = JSON.parse(localStorage.getItem("learned")) || []; //palabras aprendidas si existen
-
+const randomWord = myWords[Math.floor(Math.random() * myWords.length)];
 
 
 async function showDefinition(wordParam) {
@@ -16,6 +17,8 @@ async function showDefinition(wordParam) {
         document.getElementById("extra-btn").style.display = "none";
         return;
     };
+
+    currentWord = word;
 
     wait.style.display = "block";
     definitionSpace.style.display = "none";
@@ -58,10 +61,9 @@ async function showDefinition(wordParam) {
 }
 
 async function setReminder() {
+
     definitionSpace.style.display = "none";
     document.getElementById("extra-btn").style.display = "none";
-
-    const randomWord = myWords[Math.floor(Math.random() * myWords.length)];
 
     const min = 5 * 60 * 1000;
     const max = 10 * 60 * 1000;
@@ -74,7 +76,7 @@ async function setReminder() {
 }
 
 async function wordLearned() {
-    const word = input.value.trim();
+    const word = currentWord.trim();
     if (!word) return;
 
     if (!learned.includes(word)) {
@@ -93,7 +95,6 @@ async function wordLearned() {
     document.getElementById("extra-btn").style.display = "none";
 
     input.focus();
-
     getStars();
 }
 
@@ -120,6 +121,7 @@ async function getStars() {
 
     score.innerHTML = text;
     container.style.display = "block";
+
 }
 
 
@@ -128,3 +130,4 @@ getStars();
 search.addEventListener("click", () => { showDefinition() });
 reminder.addEventListener("click", setReminder);
 tooEasy.addEventListener("click", wordLearned);
+showDefinition(randomWord);
