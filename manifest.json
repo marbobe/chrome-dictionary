@@ -6,9 +6,7 @@
   "icons": {
     "512": "images/dictionary.png"
   },
-  "background":{
-    "service_worker": "service_worker.js"
-  },
+ 
   "action":{ 
     "default_popup": "index.html"
   },

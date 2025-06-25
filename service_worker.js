@@ -55,3 +55,8 @@ chrome.notifications.onClicked.addListener(() => {
     input.value = "";
     input.focus();
 }*/  // FUNCION PARA ACTIVAR EL POP UP DE SERVICE WORKER SE DEBERÍA PONER EN POPUP.JS
+
+
+/* "background":{
+    "service_worker": "service_worker.js"
+  }, */ // AÑADIR AL MANIEFEST

@@ -1,6 +1,6 @@
 body {
     margin:0;
-    padding: 10px;
+    padding: 20px 10px;
     padding-bottom: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     min-width: 400px;
@@ -47,4 +47,42 @@ button:hover{
 
 #wait{
     padding: 10px;
+}
+
+/* --- TABS ----*/
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*hide checkbox*/
+.mytabs input[type="radio"]{
+    display: none;
+}
+
+
+.mytabs label{
+    background-color: #023e8a;
+    border: 1px solid #caf0f8;
+    color: white;
+    font-weight: bold;
+    padding: 7px 40px;
+    border-radius: 7%;
+}
+
+/*all the tabs go in first place, and displays none*/
+.mytabs .tab{
+    order: 1;
+    display: none;
+}
+
+/*when tab is clicked displays block*/
+.mytabs input[type='radio']:checked + label +.tab{
+    display: block;
+}
+
+.mytabs input[type='radio']:checked + label {
+    background-color: white;
+    color: #023e8a;
 }
