@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extension Diccionari</title>
+    <title>Dictionary Extension</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
+
 <body>
-    <h1>Hola pop up!</h1>
-    <button id="boton"> pulsame </button>
+    <div class="mytabs">
+        <input type="radio" id="tab-nihongo" name="mytabs" checked="checked">
+        <label for="tab-nihongo" data-lang="ja">日本語</label>
+        <div class="tab">
+            <h1>じしょ と きおくツール</h1>
+            <p>あたらしい ことば を まなぶのは、かんたん だよ！いみ を しらべて,リマインダー を つかおう。</p>
+        </div>
+
+        <input type="radio" id="tab-english" name="mytabs" checked="checked">
+        <label for="tab-english" data-lang="en">English</label>
+        <div class="tab">
+            <h1>Dictionary and memorizer</h1>
+            <p>Learning new words is easy: search for a definition and get a reminder.</p>
+        </div>
+
+        <input type="radio" id="tab-spanish" name="mytabs" checked="checked">
+        <label for="tab-spanish" data-lang="es">Español</label>
+        <div class="tab">
+            <h1>Diccionario y memorizador</h1>
+            <p>Aprender nuevas palabras es fácil: busca la definición y programa un recordatorio.</p>
+        </div>
+    </div>
+
+    <!-- input, search button and definition space-->
+    <div>
+        <input class="" type="text" id="input-el">
+        <button type="button" id="search-btn"> Search </button>
+        <p id="definition-el"></p>
+    </div>
+
+    <!--charging gif-->
+    <div class="wait" id="wait" style="display: none;">
+        <img src=" images/loading.gif" height="70px">
+    </div>
+
+    <!--buttons-->
+    <div id="extra-btn">
+        <button type="button" id="tooeasy-btn"> Too easy </button>
+        <button type="button" id="reminder-btn"> Set Reminder </button>
+    </div>
+
+    <!--Stars score-->
+    <div id="container-score" style="display:none; ">
+        <div id="score"></div>
+    </div>
+
     <script src="popup.js"></script>
-    
 </body>
+
 </html>

@@ -1,20 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Diccionari",
+  "name": "Dictionary and memorizer",
   "version": "1.0.0",
-  "description": "Diccionari per estudiar",
+  "description": "Dictionary and memorizer: Learning new words is easy: search for a definition and get a reminder.",
   "icons": {
     "512": "images/dictionary.png"
   },
-  "background":{
-    "service_worker": "service_worker.js",
-    "type": "module"
-  },
+ 
   "action":{ 
     "default_popup": "index.html"
   },
   "permissions": [
-    "scripting"
+    "scripting",
+    "notifications",
+    "storage"
   ],
   "host_permissions": [
     "http://*/*",
